@@ -1,0 +1,16 @@
+#ide
+*.DS_Store
+.idea
+.vscode
+
+# Logs
+logs
+*.log
+pnpm-debug.log*
+
+# Dependency directories
+node_modules
+
+# Production
+dist/
+output/

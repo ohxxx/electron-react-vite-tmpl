@@ -1,0 +1,32 @@
+{
+  "name": "electron-react-vite-tmpl",
+  "version": "0.0.0",
+  "main": "src/main/index.ts",
+  "scripts": {
+    "dev": "concurrently vite \" pnpm electron:dev\" ",
+    "build": "rm -rf dist && rm -rf output && pnpm render:build  && pnpm main:build",
+    "preview": "vite preview",
+    "electron:dev": "electron .",
+    "render:build": "tsc && vite build",
+    "main:build": "electron-builder"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
+    "@vitejs/plugin-react": "^1.0.7",
+    "concurrently": "^7.0.0",
+    "electron": "^16.0.7",
+    "electron-builder": "^22.14.5",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2"
+  },
+  "build": {
+    "directories": {
+      "output": "output"
+    }
+  }
+}
